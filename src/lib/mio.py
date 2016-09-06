@@ -34,8 +34,10 @@ def read_conll_file(file_name):
     current_words = []
     current_tags = []
     
+    i = 0
     for line in codecs.open(file_name, encoding='utf-8'):
         line = line.strip()
+        i += 1
 
         if line:
             if len(line.split("\t")) != 2:
